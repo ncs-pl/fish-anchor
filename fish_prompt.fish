@@ -47,8 +47,7 @@ function fish_prompt
 
   # Git repo
   if git_is_repo
-    echo -n -s " " $git_color git_branch_name $normal_color
-    set -l anchor_git_branch_status ""
+    echo -n -s " " $git_color (git_branch_name) $normal_color
 
     if git_is_touched
       echo -n -s $git_status_color $git_status_dirty_symbol
